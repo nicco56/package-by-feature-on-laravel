@@ -4,9 +4,9 @@ namespace Packages\Animal\EndUser\GetAnimal\Repository\DB;
 
 use App\Eloquent\Animal;
 use Packages\Animal\EndUser\GetAnimal\Domain\Entity\AnimalEntity;
-use Packages\Animal\EndUser\GetAnimal\Repository\AnimalGetQueryInterface;
+use Packages\Animal\EndUser\GetAnimal\Repository\GetAnimalQueryInterface;
 
-class AnimalGetQuery implements AnimalGetQueryInterface
+class GetAnimalQuery implements GetAnimalQueryInterface
 {
     public function getAnimal(int $id): ?AnimalEntity
     {

@@ -3,7 +3,7 @@
 namespace Packages\Animal\EndUser;
 
 use Illuminate\Support\Facades\Route;
-use Packages\Animal\EndUser\GetAnimal\Adaptor\AnimalGetControllerInterface;
+use Packages\Animal\EndUser\GetAnimal\Adaptor\GetAnimalControllerInterface;
 
 class RouteServiceProvider
 {
@@ -12,6 +12,6 @@ class RouteServiceProvider
      */
     public function mapRoutes(): void
     {
-        Route::get('/{id}', AnimalGetControllerInterface::class);
+        Route::get('/{id}', GetAnimalControllerInterface::class);
     }
 }

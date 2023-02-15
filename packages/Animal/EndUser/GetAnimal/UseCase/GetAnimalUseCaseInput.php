@@ -2,7 +2,7 @@
 
 namespace Packages\Animal\EndUser\GetAnimal\UseCase;
 
-class AnimalGetUseCaseInput
+class GetAnimalUseCaseInput
 {
     public function __construct(
         private readonly int $id

@@ -16,31 +16,31 @@
         - 📁 EndUser
             - `RouteServiceProvider.php` Route (Laravelのルート)
             - 📁 AnimalUpdate 機能の操作で別ける
-            - 📁 AnimalGet
+            - 📁 GetAnimal
                 - `readme.md`
                 - `AnimalServiceProvider.php`　DI設定
                 - 📁 Adaptor
-                    - `AnimalGetController.php`
-                    - `AnimalGetControllerInterface.php`
-                    - `AnimalGetOutput.php`　DTO
-                    - `AnimalGetInput.php`　DTO (LaravelのFormRequest)
+                    - `GetAnimalController.php`
+                    - `GetAnimalControllerInterface.php`
+                    - `GetAnimalOutput.php`　DTO
+                    - `GetAnimalInput.php`　DTO (LaravelのFormRequest)
                 - 📁 UseCase
-                    - `AnimalGetInput.php` DTO
-                    - `AnimalGetOutput.php` DTO
-                    - `AnimalGetUseCase.php`
+                    - `GetAnimalInput.php` DTO
+                    - `GetAnimalOutput.php` DTO
+                    - `GetAnimalUseCase.php`
                 - 📁 Repository
-                    - `AnimalGetQueryInterface.php`
+                    - `GetAnimalQueryInterface.php`
                     - 📁 Radis　
                     - 📁 Db
-                        - `AnimalGetQuery.php` (LaravelのEloquentからEntityを返す）
+                        - `GetAnimalQuery.php` (LaravelのEloquentからEntityを返す）
                 - 📁 Domain
                     - 📁 Entity
                         - `AnimalEntity.php`
                 - 📁 Test
                     - 📁 Feature
-                        - `AnimalGetTest.php`
+                        - `GetAnimalTest.php`
                     - 📁 Util
-                        - `AnimalGetTest.php`
+                        - `GetAnimalTest.php`
     - 📁 Core　Coreパッケージ パッケージを跨いで使用可能
         - Modules アプリとしての共通ロジック
           - Selenium

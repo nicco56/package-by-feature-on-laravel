@@ -6,7 +6,7 @@ namespace Packages\Animal\EndUser\GetAnimal\Adaptor;
 use Illuminate\Http\JsonResponse;
 use Packages\Animal\EndUser\GetAnimal\Domain\Entity\AnimalEntity;
 
-class AnimalGetControllerOutput
+class GetAnimalControllerOutput
 {
     /**
      * @param AnimalEntity|null $animalEntity

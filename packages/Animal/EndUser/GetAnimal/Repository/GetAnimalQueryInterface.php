@@ -5,7 +5,7 @@ namespace Packages\Animal\EndUser\GetAnimal\Repository;
 
 use Packages\Animal\EndUser\GetAnimal\Domain\Entity\AnimalEntity;
 
-interface AnimalGetQueryInterface
+interface GetAnimalQueryInterface
 {
     /**
      * @param int $id
