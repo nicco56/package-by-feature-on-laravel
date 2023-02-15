@@ -25,17 +25,17 @@
                     - [AnimalGetControllerOutput.php](packages%2FAnimal%2FEndUser%2FAnimalGet%2FAdaptor%2FAnimalGetControllerOutput.php)　DTO
                     - [AnimalGetControllerInput.php](packages%2FAnimal%2FEndUser%2FAnimalGet%2FAdaptor%2FAnimalGetControllerInput.php)　DTO (LaravelのFormRequest)
                 - 📁 [UseCase](packages%2FAnimal%2FEndUser%2FAnimalGet%2FUseCase)
-                    - [AnimalGetUseCaseInput.php](packages%2FAnimal%2FEndUser%2FAnimalGet%2FUseCase%2FAnimalGetUseCaseInput.php)`AnimalGetInput.php` DTO
+                    - [AnimalGetUseCaseInput.php](packages%2FAnimal%2FEndUser%2FAnimalGet%2FUseCase%2FAnimalGetUseCaseInput.php) DTO
                     - [AnimalGetUseCaseOutput.php](packages%2FAnimal%2FEndUser%2FAnimalGet%2FUseCase%2FAnimalGetUseCaseOutput.php) DTO
                     - [AnimalGetUseCase.php](packages%2FAnimal%2FEndUser%2FAnimalGet%2FUseCase%2FAnimalGetUseCase.php)
                 - 📁 [Repository](packages%2FAnimal%2FEndUser%2FAnimalGet%2FRepository)
-                    - [AnimalGetQueryInterface.php](packages%2FAnimal%2FEndUser%2FAnimalGet%2FRepository%2FAnimalGetQueryInterface.php)`AnimalGetQueryInterface.php`
+                    - [AnimalGetQueryInterface.php](packages%2FAnimal%2FEndUser%2FAnimalGet%2FRepository%2FAnimalGetQueryInterface.php)
                     - 📁 Radis　
                     - 📁 [DB](packages%2FAnimal%2FEndUser%2FAnimalGet%2FRepository%2FDB)
                         - [AnimalGetQuery.php](packages%2FAnimal%2FEndUser%2FAnimalGet%2FRepository%2FDB%2FAnimalGetQuery.php) (LaravelのEloquentからEntityを返す）
                 - 📁 [Domain](packages%2FAnimal%2FEndUser%2FAnimalGet%2FDomain)
                     - 📁 [Entity](packages%2FAnimal%2FEndUser%2FAnimalGet%2FDomain%2FEntity)
-                        - [AnimalEntity.php](packages%2FAnimal%2FEndUser%2FAnimalGet%2FDomain%2FEntity%2FAnimalEntity.php)`AnimalEntity.php`
+                        - [AnimalEntity.php](packages%2FAnimal%2FEndUser%2FAnimalGet%2FDomain%2FEntity%2FAnimalEntity.php)
                 - 📁 Test
                     - 📁 Feature
                         - `AnimalGetTest.php`
