@@ -10,32 +10,32 @@
 
 ## ファイル構成
 
-- 📁 packages
-    - 📁 Animal 機能単位でパッケージを作成
+- 📁 [packages](packages)
+    - 📁 [Animal](packages%2FAnimal) 機能単位でパッケージを作成
         - 📁 Admin 利用者で別ける
-        - 📁 EndUser
-            - `RouteServiceProvider.php` Route (Laravelのルート)
+        - 📁 [EndUser](packages%2FAnimal%2FEndUser)
+            - [RouteServiceProvider.php](packages%2FAnimal%2FEndUser%2FRouteServiceProvider.php) Route (Laravelのルート)
             - 📁 AnimalUpdate 機能の操作で別ける
-            - 📁 AnimalGet
-                - `readme.md`
-                - `AnimalServiceProvider.php`　DI設定
-                - 📁 Adaptor
-                    - `AnimalGetController.php`
-                    - `AnimalGetControllerInterface.php`
-                    - `AnimalGetOutput.php`　DTO
-                    - `AnimalGetInput.php`　DTO (LaravelのFormRequest)
-                - 📁 UseCase
-                    - `AnimalGetInput.php` DTO
-                    - `AnimalGetOutput.php` DTO
-                    - `AnimalGetUseCase.php`
-                - 📁 Repository
-                    - `AnimalGetQueryInterface.php`
+            - 📁 [AnimalGet](packages%2FAnimal%2FEndUser%2FAnimalGet)
+                - [README.md](packages%2FAnimal%2FEndUser%2FAnimalGet%2FREADME.md)`readme.md`
+                - [PackageServiceProvider.php](packages%2FAnimal%2FEndUser%2FAnimalGet%2FPackageServiceProvider.php)　DI設定
+                - 📁 [Adaptor](packages%2FAnimal%2FEndUser%2FAnimalGet%2FAdaptor)
+                    - [AnimalGetController.php](packages%2FAnimal%2FEndUser%2FAnimalGet%2FAdaptor%2FAnimalGetController.php)
+                    - [AnimalGetControllerInterface.php](packages%2FAnimal%2FEndUser%2FAnimalGet%2FAdaptor%2FAnimalGetControllerInterface.php)
+                    - [AnimalGetControllerOutput.php](packages%2FAnimal%2FEndUser%2FAnimalGet%2FAdaptor%2FAnimalGetControllerOutput.php)　DTO
+                    - [AnimalGetControllerInput.php](packages%2FAnimal%2FEndUser%2FAnimalGet%2FAdaptor%2FAnimalGetControllerInput.php)　DTO (LaravelのFormRequest)
+                - 📁 [UseCase](packages%2FAnimal%2FEndUser%2FAnimalGet%2FUseCase)
+                    - [AnimalGetUseCaseInput.php](packages%2FAnimal%2FEndUser%2FAnimalGet%2FUseCase%2FAnimalGetUseCaseInput.php)`AnimalGetInput.php` DTO
+                    - [AnimalGetUseCaseOutput.php](packages%2FAnimal%2FEndUser%2FAnimalGet%2FUseCase%2FAnimalGetUseCaseOutput.php) DTO
+                    - [AnimalGetUseCase.php](packages%2FAnimal%2FEndUser%2FAnimalGet%2FUseCase%2FAnimalGetUseCase.php)
+                - 📁 [Repository](packages%2FAnimal%2FEndUser%2FAnimalGet%2FRepository)
+                    - [AnimalGetQueryInterface.php](packages%2FAnimal%2FEndUser%2FAnimalGet%2FRepository%2FAnimalGetQueryInterface.php)`AnimalGetQueryInterface.php`
                     - 📁 Radis　
-                    - 📁 Db
-                        - `AnimalGetQuery.php` (LaravelのEloquentからEntityを返す）
-                - 📁 Domain
-                    - 📁 Entity
-                        - `AnimalEntity.php`
+                    - 📁 [DB](packages%2FAnimal%2FEndUser%2FAnimalGet%2FRepository%2FDB)
+                        - [AnimalGetQuery.php](packages%2FAnimal%2FEndUser%2FAnimalGet%2FRepository%2FDB%2FAnimalGetQuery.php) (LaravelのEloquentからEntityを返す）
+                - 📁 [Domain](packages%2FAnimal%2FEndUser%2FAnimalGet%2FDomain)
+                    - 📁 [Entity](packages%2FAnimal%2FEndUser%2FAnimalGet%2FDomain%2FEntity)
+                        - [AnimalEntity.php](packages%2FAnimal%2FEndUser%2FAnimalGet%2FDomain%2FEntity%2FAnimalEntity.php)`AnimalEntity.php`
                 - 📁 Test
                     - 📁 Feature
                         - `AnimalGetTest.php`
