@@ -17,7 +17,7 @@
             - [RouteServiceProvider.php](packages%2FAnimal%2FEndUser%2FRouteServiceProvider.php) Route (Laravelのルート)
             - 📁 AnimalUpdate 機能の操作で別ける
             - 📁 [AnimalGet](packages%2FAnimal%2FEndUser%2FAnimalGet)
-                - [README.md](packages%2FAnimal%2FEndUser%2FAnimalGet%2FREADME.md)`readme.md`
+                - [README.md](packages%2FAnimal%2FEndUser%2FAnimalGet%2FREADME.md)
                 - [PackageServiceProvider.php](packages%2FAnimal%2FEndUser%2FAnimalGet%2FPackageServiceProvider.php)　DI設定
                 - 📁 [Adaptor](packages%2FAnimal%2FEndUser%2FAnimalGet%2FAdaptor)
                     - [AnimalGetController.php](packages%2FAnimal%2FEndUser%2FAnimalGet%2FAdaptor%2FAnimalGetController.php)
