@@ -6,34 +6,36 @@
 
 機能単位でパッケージ化し責務範囲の明確化と、 クリーンアーキテクチャも入れてみる。
 
+flow的には、
+
 ---
 
 ## ファイル構成
 
 - 📁 [packages](packages)
-    - 📁 [Animal](packages%2FAnimal) 機能単位でパッケージを作成
-        - 📁 Admin 利用者で別ける
+    - 📁 [Animal](packages%2FAnimal) **_動物パッケージ_**
+        - 📁 Admin 利用者で別け、他の利用者に影響がでないように。
         - 📁 [EndUser](packages%2FAnimal%2FEndUser)
-            - [RouteServiceProvider.php](packages%2FAnimal%2FEndUser%2FRouteServiceProvider.php) Route (Laravelのルート)
-            - 📁 AnimalUpdate 機能の操作で別ける
-            - 📁 [AnimalGet](packages%2FAnimal%2FEndUser%2FAnimalGet)
+            - [RouteServiceProvider.php](packages%2FAnimal%2FEndUser%2FRouteServiceProvider.php) LaravelのRoute
+            - 📁 AnimalUpdate
+            - 📁 [AnimalGet](packages%2FAnimal%2FEndUser%2FAnimalGet)　操作で別けて、他の操作に影響がでないようにする。
                 - [README.md](packages%2FAnimal%2FEndUser%2FAnimalGet%2FREADME.md)
-                - [PackageServiceProvider.php](packages%2FAnimal%2FEndUser%2FAnimalGet%2FPackageServiceProvider.php)　DI設定
-                - 📁 [Adaptor](packages%2FAnimal%2FEndUser%2FAnimalGet%2FAdaptor)
+                - [PackageServiceProvider.php](packages%2FAnimal%2FEndUser%2FAnimalGet%2FPackageServiceProvider.php)
+                - 📁 [Adaptor](packages%2FAnimal%2FEndUser%2FAnimalGet%2FAdaptor) **_【コントローラー層】 外部からのinputを受け付ける。_**
                     - [AnimalGetController.php](packages%2FAnimal%2FEndUser%2FAnimalGet%2FAdaptor%2FAnimalGetController.php)
                     - [AnimalGetControllerInterface.php](packages%2FAnimal%2FEndUser%2FAnimalGet%2FAdaptor%2FAnimalGetControllerInterface.php)
-                    - [AnimalGetControllerOutput.php](packages%2FAnimal%2FEndUser%2FAnimalGet%2FAdaptor%2FAnimalGetControllerOutput.php)　DTO
-                    - [AnimalGetControllerInput.php](packages%2FAnimal%2FEndUser%2FAnimalGet%2FAdaptor%2FAnimalGetControllerInput.php)　DTO (LaravelのFormRequest)
-                - 📁 [UseCase](packages%2FAnimal%2FEndUser%2FAnimalGet%2FUseCase)
-                    - [AnimalGetUseCaseInput.php](packages%2FAnimal%2FEndUser%2FAnimalGet%2FUseCase%2FAnimalGetUseCaseInput.php) DTO
-                    - [AnimalGetUseCaseOutput.php](packages%2FAnimal%2FEndUser%2FAnimalGet%2FUseCase%2FAnimalGetUseCaseOutput.php) DTO
+                    - [AnimalGetControllerOutput.php](packages%2FAnimal%2FEndUser%2FAnimalGet%2FAdaptor%2FAnimalGetControllerOutput.php)
+                    - [AnimalGetControllerInput.php](packages%2FAnimal%2FEndUser%2FAnimalGet%2FAdaptor%2FAnimalGetControllerInput.php) LaravelのFormRequest使用
+                - 📁 [UseCase](packages%2FAnimal%2FEndUser%2FAnimalGet%2FUseCase) **_【UseCase層】コントローラー層から呼ばれ、処理を行う。_**
+                    - [AnimalGetUseCaseInput.php](packages%2FAnimal%2FEndUser%2FAnimalGet%2FUseCase%2FAnimalGetUseCaseInput.php) 
+                    - [AnimalGetUseCaseOutput.php](packages%2FAnimal%2FEndUser%2FAnimalGet%2FUseCase%2FAnimalGetUseCaseOutput.php) 
                     - [AnimalGetUseCase.php](packages%2FAnimal%2FEndUser%2FAnimalGet%2FUseCase%2FAnimalGetUseCase.php)
-                - 📁 [Repository](packages%2FAnimal%2FEndUser%2FAnimalGet%2FRepository)
+                - 📁 [Repository](packages%2FAnimal%2FEndUser%2FAnimalGet%2FRepository)　**_【Repository層】UsaCase層から呼ばれ、Entityを返す。_**
                     - [AnimalGetQueryInterface.php](packages%2FAnimal%2FEndUser%2FAnimalGet%2FRepository%2FAnimalGetQueryInterface.php)
                     - 📁 Radis　
                     - 📁 [DB](packages%2FAnimal%2FEndUser%2FAnimalGet%2FRepository%2FDB)
-                        - [AnimalGetQuery.php](packages%2FAnimal%2FEndUser%2FAnimalGet%2FRepository%2FDB%2FAnimalGetQuery.php) (LaravelのEloquentからEntityを返す）
-                - 📁 [Domain](packages%2FAnimal%2FEndUser%2FAnimalGet%2FDomain)
+                        - [AnimalGetQuery.php](packages%2FAnimal%2FEndUser%2FAnimalGet%2FRepository%2FDB%2FAnimalGetQuery.php) 
+                - 📁 [Domain](packages%2FAnimal%2FEndUser%2FAnimalGet%2FDomain)　**_【Domain層】Entityや複雑な業務ロジックなど置いておく_**
                     - 📁 [Entity](packages%2FAnimal%2FEndUser%2FAnimalGet%2FDomain%2FEntity)
                         - [AnimalEntity.php](packages%2FAnimal%2FEndUser%2FAnimalGet%2FDomain%2FEntity%2FAnimalEntity.php)
                 - 📁 Test
