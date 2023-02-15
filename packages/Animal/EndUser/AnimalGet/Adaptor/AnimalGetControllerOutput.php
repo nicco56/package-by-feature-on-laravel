@@ -1,10 +1,10 @@
 <?php
 
-namespace Packages\Animal\EndUser\GetAnimal\Adaptor;
+namespace Packages\Animal\EndUser\AnimalGet\Adaptor;
 
 
 use Illuminate\Http\JsonResponse;
-use Packages\Animal\EndUser\GetAnimal\Domain\Entity\AnimalEntity;
+use Packages\Animal\EndUser\AnimalGet\Domain\Entity\AnimalEntity;
 
 class AnimalGetControllerOutput
 {

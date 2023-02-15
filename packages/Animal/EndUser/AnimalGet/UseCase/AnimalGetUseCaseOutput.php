@@ -1,9 +1,9 @@
 <?php
 
-namespace Packages\Animal\EndUser\GetAnimal\UseCase;
+namespace Packages\Animal\EndUser\AnimalGet\UseCase;
 
 
-use Packages\Animal\EndUser\GetAnimal\Domain\Entity\AnimalEntity;
+use Packages\Animal\EndUser\AnimalGet\Domain\Entity\AnimalEntity;
 
 class AnimalGetUseCaseOutput
 {
@@ -20,7 +20,7 @@ class AnimalGetUseCaseOutput
     /**
      * @return AnimalEntity|null
      */
-    public function getAnimalEntity(): ?AnimalEntity
+    public function AnimalGetEntity(): ?AnimalEntity
     {
         return $this->animalEntity;
     }

@@ -1,6 +1,6 @@
 <?php
 
-namespace Packages\Animal\EndUser\GetAnimal\Adaptor;
+namespace Packages\Animal\EndUser\AnimalGet\Adaptor;
 
 use Illuminate\Foundation\Http\FormRequest;
 

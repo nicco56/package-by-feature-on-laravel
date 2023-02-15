@@ -1,11 +1,11 @@
 <?php
 
-namespace Packages\Animal\EndUser\GetAnimal\Adaptor;
+namespace Packages\Animal\EndUser\AnimalGet\Adaptor;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\JsonResponse;
-use Packages\Animal\EndUser\GetAnimal\UseCase\AnimalGetUseCaseInput;
-use Packages\Animal\EndUser\GetAnimal\UseCase\AnimalGetUseCase;
+use Packages\Animal\EndUser\AnimalGet\UseCase\AnimalGetUseCaseInput;
+use Packages\Animal\EndUser\AnimalGet\UseCase\AnimalGetUseCase;
 
 class AnimalGetController extends Controller implements AnimalGetControllerInterface
 {
@@ -34,7 +34,7 @@ class AnimalGetController extends Controller implements AnimalGetControllerInter
         $useCaseOutput = $this->animalGetUseCase->__invoke($input);
 
         // コントローラーのOutputを作成
-        $controllerOutput = (new AnimalGetControllerOutput($useCaseOutput->getAnimalEntity()));
+        $controllerOutput = (new AnimalGetControllerOutput($useCaseOutput->AnimalGetEntity()));
 
         // コントローラーのOutputで戻し方指定
         return $controllerOutput->getJsonResponse();

@@ -1,6 +1,6 @@
 <?php
 
-namespace Packages\Animal\EndUser\GetAnimal\Domain\Entity;
+namespace Packages\Animal\EndUser\AnimalGet\Domain\Entity;
 
 class AnimalEntity
 {

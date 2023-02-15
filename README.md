@@ -71,10 +71,10 @@
 (new \Animals\Animal\EndUser\RouteServiceProvider())->mapRoutes();
 ```
 
- [app.php](config%2Fapp.php) のprovidersに[作成したAnimalのServiceProvider](Animals%2FAnimal%2FEndUser%2FGetAnimal%2FAnimalServiceProvider.php)を追記
+ [app.php](config%2Fapp.php) のprovidersに[作成したAnimalのServiceProvider](Animals%2FAnimal%2FEndUser%2FAnimalGet%2FAnimalServiceProvider.php)を追記
 
 ```
-Animals\Animal\EndUser\GetAnimal\AnimalServiceProvider::class
+Animals\Animal\EndUser\AnimalGet\AnimalServiceProvider::class
 ```
 
 

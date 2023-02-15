@@ -3,7 +3,7 @@
 namespace Packages\Animal\EndUser;
 
 use Illuminate\Support\Facades\Route;
-use Packages\Animal\EndUser\GetAnimal\Adaptor\AnimalGetControllerInterface;
+use Packages\Animal\EndUser\AnimalGet\Adaptor\AnimalGetControllerInterface;
 
 class RouteServiceProvider
 {
