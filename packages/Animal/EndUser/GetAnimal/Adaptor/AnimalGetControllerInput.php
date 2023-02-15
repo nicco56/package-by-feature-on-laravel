@@ -4,7 +4,7 @@ namespace Packages\Animal\EndUser\GetAnimal\Adaptor;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class GetAnimalControllerInput extends FormRequest
+class AnimalGetControllerInput extends FormRequest
 {
     /**
      * @return bool

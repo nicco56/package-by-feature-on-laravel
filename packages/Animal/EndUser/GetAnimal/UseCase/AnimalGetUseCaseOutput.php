@@ -5,7 +5,7 @@ namespace Packages\Animal\EndUser\GetAnimal\UseCase;
 
 use Packages\Animal\EndUser\GetAnimal\Domain\Entity\AnimalEntity;
 
-class GetAnimalUseCaseOutput
+class AnimalGetUseCaseOutput
 {
     private ?AnimalEntity $animalEntity;
 
