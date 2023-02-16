@@ -3,7 +3,7 @@
 namespace Packages\Animal\EndUser\AnimalGet\UseCase;
 
 
-use Packages\Animal\EndUser\AnimalGet\Repository\AnimalGetQueryInterface;
+use Packages\Animal\EndUser\AnimalGet\Domain\Repository\AnimalGetQueryInterface;
 
 class AnimalGetUseCase
 {

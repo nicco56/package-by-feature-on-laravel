@@ -6,8 +6,8 @@ use Illuminate\Contracts\Support\DeferrableProvider;
 use Illuminate\Support\ServiceProvider;
 use Packages\Animal\EndUser\AnimalGet\Adaptor\AnimalGetController;
 use Packages\Animal\EndUser\AnimalGet\Adaptor\AnimalGetControllerInterface;
-use Packages\Animal\EndUser\AnimalGet\Repository\AnimalGetQueryInterface;
-use Packages\Animal\EndUser\AnimalGet\Repository\DB\AnimalGetQuery;
+use Packages\Animal\EndUser\AnimalGet\Domain\Repository\AnimalGetQueryInterface;
+use Packages\Animal\EndUser\AnimalGet\Domain\Repository\DB\AnimalGetQuery;
 
 class PackageServiceProvider extends ServiceProvider implements DeferrableProvider
 {

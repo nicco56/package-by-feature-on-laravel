@@ -28,14 +28,14 @@
                     - [AnimalGetUseCaseInput.php](packages%2FAnimal%2FEndUser%2FAnimalGet%2FUseCase%2FAnimalGetUseCaseInput.php) 
                     - [AnimalGetUseCaseOutput.php](packages%2FAnimal%2FEndUser%2FAnimalGet%2FUseCase%2FAnimalGetUseCaseOutput.php) 
                     - [AnimalGetUseCase.php](packages%2FAnimal%2FEndUser%2FAnimalGet%2FUseCase%2FAnimalGetUseCase.php)
-                - 📁 [Repository](packages%2FAnimal%2FEndUser%2FAnimalGet%2FRepository)　**_【Repository層】UsaCase層から呼ばれ、Entityを返す。_**
-                    - [AnimalGetQueryInterface.php](packages%2FAnimal%2FEndUser%2FAnimalGet%2FRepository%2FAnimalGetQueryInterface.php)
-                    - 📁 Radis　
-                    - 📁 [DB](packages%2FAnimal%2FEndUser%2FAnimalGet%2FRepository%2FDB)
-                        - [AnimalGetQuery.php](packages%2FAnimal%2FEndUser%2FAnimalGet%2FRepository%2FDB%2FAnimalGetQuery.php) 
                 - 📁 [Domain](packages%2FAnimal%2FEndUser%2FAnimalGet%2FDomain)　**_【Domain層】Entityや複雑な業務ロジックなど置いておく_**
                     - 📁 [Entity](packages%2FAnimal%2FEndUser%2FAnimalGet%2FDomain%2FEntity)
                         - [AnimalEntity.php](packages%2FAnimal%2FEndUser%2FAnimalGet%2FDomain%2FEntity%2FAnimalEntity.php)
+                    - 📁 [Repository](packages%2FAnimal%2FEndUser%2FAnimalGet%2FDomain%2FDomain%2FRepository)　**_【Repository層】UsaCase層から呼ばれ、Entityを返す。_**
+                         - [AnimalGetQueryInterface.php](packages%2FAnimal%2FEndUser%2FAnimalGet%2FDomain%2FRepository%2FAnimalGetQueryInterface.php)
+                         - 📁 Radis　
+                         - 📁 [DB](packages%2FAnimal%2FEndUser%2FAnimalGet%2FDomain%2FRepository%2FDB)
+                             - [AnimalGetQuery.php](packages%2FAnimal%2FEndUser%2FAnimalGet%2FRepository%2FDB%2FAnimalGetQuery.php)
                 - 📁 Test
                     - 📁 Feature
                         - `AnimalGetTest.php`

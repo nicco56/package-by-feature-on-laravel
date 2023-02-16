@@ -1,10 +1,10 @@
 <?php
 
-namespace Packages\Animal\EndUser\AnimalGet\Repository\DB;
+namespace Packages\Animal\EndUser\AnimalGet\Domain\Repository\DB;
 
 use App\Eloquent\Animal;
 use Packages\Animal\EndUser\AnimalGet\Domain\Entity\AnimalEntity;
-use Packages\Animal\EndUser\AnimalGet\Repository\AnimalGetQueryInterface;
+use Packages\Animal\EndUser\AnimalGet\Domain\Repository\AnimalGetQueryInterface;
 
 class AnimalGetQuery implements AnimalGetQueryInterface
 {
