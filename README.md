@@ -6,8 +6,6 @@
 
 機能単位でパッケージ化し責務範囲の明確化と、 クリーンアーキテクチャも入れてみる。
 
-flow的には、
-
 ---
 
 ## ファイル構成
@@ -56,15 +54,15 @@ flow的には、
 
 ---
 
-## Laravel側で必要な処理
+## Laravel側で必要な記載
 
 
- routeにAnimalsディレクトリを作成
+routeディレクトリにpackagesディレクトリを作成
 
- [composer.json](composer.json) のautoloadにAnimals追加
+ [composer.json](composer.json) のautoloadにPackages追加
 
 ```
-"Animals\\": "Animals/"
+"Packages\\": "packages/"
 ```
 
  [RouteServiceProvider.php](app%2FProviders%2FRouteServiceProvider.php) のboot()に[パッケージのRouteを](packages%2FAnimal%2FEndUser%2FRouteServiceProvider.php)を追記

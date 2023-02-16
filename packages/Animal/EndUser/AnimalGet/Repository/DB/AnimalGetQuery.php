@@ -10,7 +10,6 @@ class AnimalGetQuery implements AnimalGetQueryInterface
 {
     public function AnimalGet(int $id): ?AnimalEntity
     {
-        // Eloquentで取得（Laravel依存）
         $result = Animal::where(['id' => $id])->first();
 
         if ($result) {
