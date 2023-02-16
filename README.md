@@ -1,4 +1,4 @@
-# Animal By Feature on Laravelの巻
+# Package By Feature on Laravelの巻
 
 ---
 
@@ -28,10 +28,10 @@
                     - [AnimalGetUseCaseInput.php](packages%2FAnimal%2FEndUser%2FAnimalGet%2FUseCase%2FAnimalGetUseCaseInput.php) 
                     - [AnimalGetUseCaseOutput.php](packages%2FAnimal%2FEndUser%2FAnimalGet%2FUseCase%2FAnimalGetUseCaseOutput.php) 
                     - [AnimalGetUseCase.php](packages%2FAnimal%2FEndUser%2FAnimalGet%2FUseCase%2FAnimalGetUseCase.php)
-                - 📁 [Domain](packages%2FAnimal%2FEndUser%2FAnimalGet%2FDomain)　**_【Domain層】Entityや複雑な業務ロジックなど置いておく_**
+                - 📁 [Domain](packages%2FAnimal%2FEndUser%2FAnimalGet%2FDomain)　**_【Domain層】UsaCase層から呼ばれ、処理を行う。_**
                     - 📁 [Entity](packages%2FAnimal%2FEndUser%2FAnimalGet%2FDomain%2FEntity)
                         - [AnimalEntity.php](packages%2FAnimal%2FEndUser%2FAnimalGet%2FDomain%2FEntity%2FAnimalEntity.php)
-                    - 📁 [Repository](packages%2FAnimal%2FEndUser%2FAnimalGet%2FDomain%2FDomain%2FRepository)　**_【Repository層】UsaCase層から呼ばれ、Entityを返す。_**
+                    - 📁 [Repository](packages%2FAnimal%2FEndUser%2FAnimalGet%2FDomain%2FDomain%2FRepository)
                          - [AnimalGetQueryInterface.php](packages%2FAnimal%2FEndUser%2FAnimalGet%2FDomain%2FRepository%2FAnimalGetQueryInterface.php)
                          - 📁 Radis　
                          - 📁 [DB](packages%2FAnimal%2FEndUser%2FAnimalGet%2FDomain%2FRepository%2FDB)
@@ -65,7 +65,7 @@ routeディレクトリにpackagesディレクトリを作成
 "Packages\\": "packages/"
 ```
 
- [RouteServiceProvider.php](app%2FProviders%2FRouteServiceProvider.php) のboot()に[パッケージのRouteを](packages%2FAnimal%2FEndUser%2FRouteServiceProvider.php)を追記
+ [RouteServiceProvider.php](app%2FProviders%2FRouteServiceProvider.php) のboot()に[パッケージのRoute](packages%2FAnimal%2FEndUser%2FRouteServiceProvider.php)を追記
 
 ```
 (new \Animals\Animal\EndUser\RouteServiceProvider())->mapRoutes();
