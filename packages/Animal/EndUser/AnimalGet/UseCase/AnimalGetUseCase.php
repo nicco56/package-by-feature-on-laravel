@@ -23,7 +23,7 @@ class AnimalGetUseCase
     public function __invoke(AnimalGetUseCaseInput $input): AnimalGetUseCaseOutput
     {
         // 動物取得クエリーからEntity取得
-        $animalEntity = $this->animalGetQuery->AnimalGet($input->getId());
+        $animalEntity = $this->animalGetQuery->animalGet($input->getId());
 
         // UseCaseのOutputを作成し、返す
         return new AnimalGetUseCaseOutput(['animalEntity' => $animalEntity]);

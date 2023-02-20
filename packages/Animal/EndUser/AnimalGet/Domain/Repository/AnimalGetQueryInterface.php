@@ -11,5 +11,5 @@ interface AnimalGetQueryInterface
      * @param int $id
      * @return AnimalEntity|null
      */
-    public function AnimalGet(int $id): ?AnimalEntity;
+    public function animalGet(int $id): ?AnimalEntity;
 }

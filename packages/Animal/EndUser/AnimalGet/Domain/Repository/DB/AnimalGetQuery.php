@@ -8,7 +8,7 @@ use Packages\Animal\EndUser\AnimalGet\Domain\Repository\AnimalGetQueryInterface;
 
 class AnimalGetQuery implements AnimalGetQueryInterface
 {
-    public function AnimalGet(int $id): ?AnimalEntity
+    public function animalGet(int $id): ?AnimalEntity
     {
         $result = Animal::where(['id' => $id])->first();
 

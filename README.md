@@ -19,7 +19,7 @@
             - 📁 [AnimalGet](packages%2FAnimal%2FEndUser%2FAnimalGet)　操作で別けて、他の操作に影響がでないようにする。
                 - [README.md](packages%2FAnimal%2FEndUser%2FAnimalGet%2FREADME.md)
                 - [PackageServiceProvider.php](packages%2FAnimal%2FEndUser%2FAnimalGet%2FPackageServiceProvider.php)
-                - 📁 [Adaptor](packages%2FAnimal%2FEndUser%2FAnimalGet%2FAdaptor) **_【コントローラー層】 外部からのinputを受け付ける。_**
+                - 📁 [Adaptor](packages%2FAnimal%2FEndUser%2FAnimalGet%2FAdaptor) **_【コントローラー層】 外部からのinputを受け付ける、outputで戻り型を指定_**
                     - [AnimalGetController.php](packages%2FAnimal%2FEndUser%2FAnimalGet%2FAdaptor%2FAnimalGetController.php)
                     - [AnimalGetControllerInterface.php](packages%2FAnimal%2FEndUser%2FAnimalGet%2FAdaptor%2FAnimalGetControllerInterface.php)
                     - [AnimalGetControllerOutput.php](packages%2FAnimal%2FEndUser%2FAnimalGet%2FAdaptor%2FAnimalGetControllerOutput.php)
@@ -28,14 +28,15 @@
                     - [AnimalGetUseCaseInput.php](packages%2FAnimal%2FEndUser%2FAnimalGet%2FUseCase%2FAnimalGetUseCaseInput.php) 
                     - [AnimalGetUseCaseOutput.php](packages%2FAnimal%2FEndUser%2FAnimalGet%2FUseCase%2FAnimalGetUseCaseOutput.php) 
                     - [AnimalGetUseCase.php](packages%2FAnimal%2FEndUser%2FAnimalGet%2FUseCase%2FAnimalGetUseCase.php)
-                - 📁 [Domain](packages%2FAnimal%2FEndUser%2FAnimalGet%2FDomain)　**_【Domain層】UsaCase層から呼ばれ、処理を行う。_**
+                - 📁 [Domain](packages%2FAnimal%2FEndUser%2FAnimalGet%2FDomain)　**_【Domain層】UsaCase層から呼ばれる。Entityや複雑な業務ロジックなど置いておく_**
                     - 📁 [Entity](packages%2FAnimal%2FEndUser%2FAnimalGet%2FDomain%2FEntity)
                         - [AnimalEntity.php](packages%2FAnimal%2FEndUser%2FAnimalGet%2FDomain%2FEntity%2FAnimalEntity.php)
                     - 📁 [Repository](packages%2FAnimal%2FEndUser%2FAnimalGet%2FDomain%2FDomain%2FRepository)
                          - [AnimalGetQueryInterface.php](packages%2FAnimal%2FEndUser%2FAnimalGet%2FDomain%2FRepository%2FAnimalGetQueryInterface.php)
-                         - 📁 Radis　
+                         - 📁 Radis
+                         - 📁 HogeApi
                          - 📁 [DB](packages%2FAnimal%2FEndUser%2FAnimalGet%2FDomain%2FRepository%2FDB)
-                             - [AnimalGetQuery.php](packages%2FAnimal%2FEndUser%2FAnimalGet%2FRepository%2FDB%2FAnimalGetQuery.php)
+                             - [AnimalGetQuery.php](packages%2FAnimal%2FEndUser%2FAnimalGet%2FDomain%2FRepository%2FDB%2FAnimalGetQuery.php)
                 - 📁 Test
                     - 📁 Feature
                         - `AnimalGetTest.php`

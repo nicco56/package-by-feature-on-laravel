@@ -34,7 +34,7 @@ class AnimalGetController extends Controller implements AnimalGetControllerInter
         $useCaseOutput = $this->animalGetUseCase->__invoke($input);
 
         // コントローラーのOutputを作成
-        $controllerOutput = (new AnimalGetControllerOutput($useCaseOutput->AnimalGetEntity()));
+        $controllerOutput = (new AnimalGetControllerOutput($useCaseOutput->animalGetEntity()));
 
         // コントローラーのOutputで戻し方指定
         return $controllerOutput->getJsonResponse();

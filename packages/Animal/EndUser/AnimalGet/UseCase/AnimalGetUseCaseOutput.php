@@ -20,7 +20,7 @@ class AnimalGetUseCaseOutput
     /**
      * @return AnimalEntity|null
      */
-    public function AnimalGetEntity(): ?AnimalEntity
+    public function animalGetEntity(): ?AnimalEntity
     {
         return $this->animalEntity;
     }
