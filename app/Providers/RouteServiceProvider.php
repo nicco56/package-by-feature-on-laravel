@@ -36,6 +36,7 @@ class RouteServiceProvider extends ServiceProvider
         });
 
         (new \Packages\Animal\EndUser\RouteServiceProvider())->mapRoutes();
+        (new \Packages\Animal\Admin\RouteServiceProvider())->mapRoutes();
     }
 
     /**
