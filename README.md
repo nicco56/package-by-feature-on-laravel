@@ -75,7 +75,7 @@ routeディレクトリにpackagesディレクトリを作成
  [app.php](config%2Fapp.php) のprovidersに[パッケージのPackageServiceProvider](packages%2FAnimal%2FEndUser%2FAnimalGet%2FPackageServiceProvider.php)を追記
 
 ```
-Animals\Animal\EndUser\AnimalGet\AnimalServiceProvider::class
+Packages\Animal\EndUser\AnimalGet\AnimalServiceProvider::class
 ```
 
 
