@@ -8,7 +8,7 @@ use Packages\Animal\Admin\AnimalCreate\Domain\Repository\AnimalCreateCommandInte
 
 class AnimalCreateCommand implements AnimalCreateCommandInterface
 {
-    public function AnimalCreate(AnimalEntity $animalEntity): AnimalEntity
+    public function animalCreate(AnimalEntity $animalEntity): AnimalEntity
     {
         $result = Animal::create([
             'name'  => $animalEntity->getName(),

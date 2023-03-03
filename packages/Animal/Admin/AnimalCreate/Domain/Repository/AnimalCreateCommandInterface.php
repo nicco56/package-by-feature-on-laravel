@@ -11,5 +11,5 @@ interface AnimalCreateCommandInterface
      * @param AnimalEntity $animalEntity
      * @return AnimalEntity
      */
-    public function AnimalCreate(AnimalEntity $animalEntity): AnimalEntity;
+    public function animalCreate(AnimalEntity $animalEntity): AnimalEntity;
 }
