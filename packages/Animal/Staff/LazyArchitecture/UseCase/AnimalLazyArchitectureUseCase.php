@@ -3,19 +3,12 @@
 namespace Packages\Animal\Staff\LazyArchitecture\UseCase;
 
 
-use Packages\Animal\Staff\LazyArchitecture\Domain\Entity\AnimalEntity;
-use Packages\Animal\Staff\LazyArchitecture\Domain\Repository\AnimalLazyArchitectureCommandInterface;
+use Packages\Animal\Staff\LazyArchitecture\Domain\Entity\AnimalLazyArchitectureAnimalEntity;
+use Packages\Animal\Staff\LazyArchitecture\Domain\Repository\AnimalLazyArchitectureCommand;
 
 class AnimalLazyArchitectureUseCase
 {
-    /**
-     * @param AnimalLazyArchitectureCommandInterface $animalLazyArchitectureQuery
-     */
-    public function __construct(
-        private readonly AnimalLazyArchitectureCommandInterface $animalLazyArchitectureQuery
-    )
-    {
-    }
+
 
     /**
      * @param AnimalLazyArchitectureUseCaseInput $input
@@ -24,16 +17,20 @@ class AnimalLazyArchitectureUseCase
     public function __invoke(AnimalLazyArchitectureUseCaseInput $input): AnimalLazyArchitectureUseCaseOutput
     {
         // 作成する動物
-        $inputAnimalEntity = new AnimalEntity(
-            null,
-            $input->getName(),
-            $input->getWidth(),
+        $inputAnimalEntity = new AnimalLazyArchitectureAnimalEntity(
+            id: null,
+            name: $input->getName(),
+            width: $input->getWidth(),
         );
 
         // 作成した動物
-        $LazyArchitecturedAnimalEntity = $this->animalLazyArchitectureQuery->AnimalLazyArchitecture($inputAnimalEntity);
+        $animalEntity = (new AnimalLazyArchitectureCommand())->create(
+            animalEntity: $inputAnimalEntity
+        );
 
         // UseCaseのOutputを作成し、返す
-        return new AnimalLazyArchitectureUseCaseOutput(['animalEntity' => $LazyArchitecturedAnimalEntity]);
+        return new AnimalLazyArchitectureUseCaseOutput(
+            animalEntity: $animalEntity
+        );
     }
 }

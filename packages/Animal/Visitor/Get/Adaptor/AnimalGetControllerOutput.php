@@ -1,17 +1,17 @@
 <?php
 
-namespace Packages\Animal\EndUser\AnimalGet\Adaptor;
+namespace Packages\Animal\Visitor\Get\Adaptor;
 
 
 use Illuminate\Http\JsonResponse;
-use Packages\Animal\EndUser\AnimalGet\Domain\Entity\AnimalEntity;
+use Packages\Animal\Visitor\Get\Domain\Entity\AnimalGetAnimalEntity;
 
 class AnimalGetControllerOutput
 {
     /**
-     * @param AnimalEntity|null $animalEntity
+     * @param AnimalGetAnimalEntity|null $animalEntity
      */
-    public function __construct(private readonly ?AnimalEntity $animalEntity)
+    public function __construct(private readonly ?AnimalGetAnimalEntity $animalEntity)
     {
     }
 

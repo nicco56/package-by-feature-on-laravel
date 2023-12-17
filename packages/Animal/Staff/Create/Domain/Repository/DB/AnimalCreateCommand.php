@@ -1,14 +1,14 @@
 <?php
 
-namespace Packages\Animal\Admin\AnimalCreate\Domain\Repository\DB;
+namespace Packages\Animal\Staff\Create\Domain\Repository\DB;
 
-use App\Eloquent\Animal;
-use Packages\Animal\Admin\AnimalCreate\Domain\Entity\AnimalEntity;
-use Packages\Animal\Admin\AnimalCreate\Domain\Repository\AnimalCreateCommandInterface;
+use App\Models\Animal;
+use Packages\Animal\Staff\Create\Domain\Entity\AnimalCreateAnimalEntity;
+use Packages\Animal\Staff\Create\Domain\Repository\AnimalCreateCommandInterface;
 
 class AnimalCreateCommand implements AnimalCreateCommandInterface
 {
-    public function animalCreate(AnimalEntity $animalEntity): AnimalEntity
+    public function create(AnimalCreateAnimalEntity $animalEntity): AnimalCreateAnimalEntity
     {
         $result = Animal::create([
             'name'  => $animalEntity->getName(),
@@ -18,12 +18,12 @@ class AnimalCreateCommand implements AnimalCreateCommandInterface
         return $this->convertToEntity($result);
     }
 
-    private function convertToEntity(Animal $obj): AnimalEntity
+    private function convertToEntity(Animal $obj): AnimalCreateAnimalEntity
     {
-        return new AnimalEntity(
-            (int)$obj->id,
-            (string)$obj->name,
-            (float)$obj->width ?? 0.00,
+        return new AnimalCreateAnimalEntity(
+            id: $obj->id,
+            name: $obj->name,
+            width: $obj->width ?? 0.00,
         );
     }
 }

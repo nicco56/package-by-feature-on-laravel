@@ -1,9 +1,9 @@
 <?php
 
-namespace Packages\Animal\EndUser;
+namespace Packages\Animal\Visitor;
 
 use Illuminate\Support\Facades\Route;
-use Packages\Animal\EndUser\AnimalGet\Adaptor\AnimalGetControllerInterface;
+use Packages\Animal\Visitor\Get\Adaptor\AnimalGetControllerInterface;
 
 class RouteServiceProvider
 {

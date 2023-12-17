@@ -3,24 +3,20 @@
 namespace Packages\Animal\Staff\LazyArchitecture\UseCase;
 
 
-use Packages\Animal\Staff\LazyArchitecture\Domain\Entity\AnimalEntity;
+use Packages\Animal\Staff\LazyArchitecture\Domain\Entity\AnimalLazyArchitectureAnimalEntity;
 
 class AnimalLazyArchitectureUseCaseOutput
 {
-    private AnimalEntity $animalEntity;
-
-    /**
-     * @param array $input
-     */
-    public function __construct(array $input)
+    public function __construct(
+        protected AnimalLazyArchitectureAnimalEntity $animalEntity
+    )
     {
-        $this->animalEntity = $input['animalEntity'];
     }
 
     /**
-     * @return AnimalEntity
+     * @return AnimalLazyArchitectureAnimalEntity
      */
-    public function AnimalLazyArchitectureEntity(): AnimalEntity
+    public function animalLazyArchitectureEntity(): AnimalLazyArchitectureAnimalEntity
     {
         return $this->animalEntity;
     }

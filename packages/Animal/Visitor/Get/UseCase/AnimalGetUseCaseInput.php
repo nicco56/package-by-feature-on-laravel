@@ -1,6 +1,6 @@
 <?php
 
-namespace Packages\Animal\EndUser\AnimalGet\UseCase;
+namespace Packages\Animal\Visitor\Get\UseCase;
 
 class AnimalGetUseCaseInput
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Packages\Animal\Admin\AnimalCreate\UseCase;
+namespace Packages\Animal\Staff\Create\UseCase;
 
 class AnimalCreateUseCaseInput
 {

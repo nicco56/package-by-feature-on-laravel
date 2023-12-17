@@ -1,10 +1,10 @@
 <?php
 
-namespace Packages\Animal\Admin\AnimalCreate\UseCase;
+namespace Packages\Animal\Staff\Create\UseCase;
 
 
-use Packages\Animal\Admin\AnimalCreate\Domain\Entity\AnimalEntity;
-use Packages\Animal\Admin\AnimalCreate\Domain\Repository\AnimalCreateCommandInterface;
+use Packages\Animal\Staff\Create\Domain\Entity\AnimalCreateAnimalEntity;
+use Packages\Animal\Staff\Create\Domain\Repository\AnimalCreateCommandInterface;
 
 class AnimalCreateUseCase
 {
@@ -24,16 +24,20 @@ class AnimalCreateUseCase
     public function __invoke(AnimalCreateUseCaseInput $input): AnimalCreateUseCaseOutput
     {
         // 作成する動物
-        $inputAnimalEntity = new AnimalEntity(
-            null,
-            $input->getName(),
-            $input->getWidth(),
+        $inputAnimalEntity = new AnimalCreateAnimalEntity(
+            id: null,
+            name: $input->getName(),
+            width: $input->getWidth(),
         );
 
         // 作成した動物
-        $createdAnimalEntity = $this->animalCreateQuery->AnimalCreate($inputAnimalEntity);
+        $createdAnimalEntity = $this->animalCreateQuery->create(
+            animalEntity: $inputAnimalEntity
+        );
 
         // UseCaseのOutputを作成し、返す
-        return new AnimalCreateUseCaseOutput(['animalEntity' => $createdAnimalEntity]);
+        return new AnimalCreateUseCaseOutput(
+            animalEntity: $createdAnimalEntity
+        );
     }
 }

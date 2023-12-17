@@ -196,7 +196,8 @@ return [
         App\Providers\RouteServiceProvider::class,
 
 
-        Packages\Animal\EndUser\AnimalGet\PackageServiceProvider::class,
+        Packages\Animal\Visitor\Get\PackageServiceProvider::class,
+        Packages\Animal\Staff\Create\PackageServiceProvider::class,
 
     ],
 

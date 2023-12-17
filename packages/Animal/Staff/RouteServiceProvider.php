@@ -1,9 +1,10 @@
 <?php
 
-namespace Packages\Animal\Admin;
+namespace Packages\Animal\Staff;
 
 use Illuminate\Support\Facades\Route;
-use Packages\Animal\Admin\AnimalCreate\Adaptor\AnimalCreateControllerInterface;
+use Packages\Animal\Staff\Create\Adaptor\AnimalCreateControllerInterface;
+use Packages\Animal\Staff\LazyArchitecture\Adaptor\AnimalLazyArchitectureController;
 
 class RouteServiceProvider
 {
@@ -12,6 +13,10 @@ class RouteServiceProvider
      */
     public function mapRoutes(): void
     {
+        // 正規版
         Route::post('/', AnimalCreateControllerInterface::class);
+
+        // インターフェースを端折った版。こちらの方が簡単。
+        Route::post('/lazy', AnimalLazyArchitectureController::class);
     }
 }

@@ -1,11 +1,11 @@
 <?php
 
-namespace Packages\Animal\Admin\AnimalCreate\Adaptor;
+namespace Packages\Animal\Staff\Create\Adaptor;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\JsonResponse;
-use Packages\Animal\Admin\AnimalCreate\UseCase\AnimalCreateUseCase;
-use Packages\Animal\Admin\AnimalCreate\UseCase\AnimalCreateUseCaseInput;
+use Packages\Animal\Staff\Create\UseCase\AnimalCreateUseCase;
+use Packages\Animal\Staff\Create\UseCase\AnimalCreateUseCaseInput;
 
 class AnimalCreateController extends Controller implements AnimalCreateControllerInterface
 {
@@ -28,7 +28,7 @@ class AnimalCreateController extends Controller implements AnimalCreateControlle
         $useCaseOutput = $this->AnimalCreateUseCase->__invoke(new AnimalCreateUseCaseInput($request->getName(), $request->getWidth()));
 
         // コントローラーのOutputを作成
-        $controllerOutput = (new AnimalCreateControllerOutput($useCaseOutput->AnimalCreateEntity()));
+        $controllerOutput = (new AnimalCreateControllerOutput($useCaseOutput->AnimalEntity()));
 
         // コントローラーのOutputで戻し方指定
         return $controllerOutput->getJsonResponse();

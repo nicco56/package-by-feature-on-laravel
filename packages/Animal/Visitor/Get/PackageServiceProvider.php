@@ -1,13 +1,13 @@
 <?php
 
-namespace Packages\Animal\EndUser\AnimalGet;
+namespace Packages\Animal\Visitor\Get;
 
 use Illuminate\Contracts\Support\DeferrableProvider;
 use Illuminate\Support\ServiceProvider;
-use Packages\Animal\EndUser\AnimalGet\Adaptor\AnimalGetController;
-use Packages\Animal\EndUser\AnimalGet\Adaptor\AnimalGetControllerInterface;
-use Packages\Animal\EndUser\AnimalGet\Domain\Repository\AnimalGetQueryInterface;
-use Packages\Animal\EndUser\AnimalGet\Domain\Repository\DB\AnimalGetQuery;
+use Packages\Animal\Visitor\Get\Adaptor\AnimalGetController;
+use Packages\Animal\Visitor\Get\Adaptor\AnimalGetControllerInterface;
+use Packages\Animal\Visitor\Get\Domain\Repository\AnimalGetQueryInterface;
+use Packages\Animal\Visitor\Get\Domain\Repository\DB\AnimalGetQuery;
 
 class PackageServiceProvider extends ServiceProvider implements DeferrableProvider
 {

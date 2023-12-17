@@ -1,6 +1,6 @@
 <?php
 
-namespace Packages\Animal\EndUser\AnimalGet\Adaptor;
+namespace Packages\Animal\Visitor\Get\Adaptor;
 
 
 interface AnimalGetControllerInterface

@@ -1,9 +1,9 @@
 <?php
 
-namespace Packages\Animal\EndUser\AnimalGet\UseCase;
+namespace Packages\Animal\Visitor\Get\UseCase;
 
 
-use Packages\Animal\EndUser\AnimalGet\Domain\Repository\AnimalGetQueryInterface;
+use Packages\Animal\Visitor\Get\Domain\Repository\AnimalGetQueryInterface;
 
 class AnimalGetUseCase
 {

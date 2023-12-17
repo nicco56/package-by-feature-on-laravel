@@ -35,8 +35,8 @@ class RouteServiceProvider extends ServiceProvider
                 ->group(base_path('routes/web.php'));
         });
 
-        (new \Packages\Animal\EndUser\RouteServiceProvider())->mapRoutes();
-        (new \Packages\Animal\Admin\RouteServiceProvider())->mapRoutes();
+        (new \Packages\Animal\Visitor\RouteServiceProvider())->mapRoutes();
+        (new \Packages\Animal\Staff\RouteServiceProvider())->mapRoutes();
     }
 
     /**

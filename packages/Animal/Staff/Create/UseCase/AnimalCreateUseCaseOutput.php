@@ -1,26 +1,20 @@
 <?php
 
-namespace Packages\Animal\Admin\AnimalCreate\UseCase;
+namespace Packages\Animal\Staff\Create\UseCase;
 
 
-use Packages\Animal\Admin\AnimalCreate\Domain\Entity\AnimalEntity;
+use Packages\Animal\Staff\Create\Domain\Entity\AnimalCreateAnimalEntity;
 
 class AnimalCreateUseCaseOutput
 {
-    private AnimalEntity $animalEntity;
-
-    /**
-     * @param array $input
-     */
-    public function __construct(array $input)
+    public function __construct(protected AnimalCreateAnimalEntity $animalEntity)
     {
-        $this->animalEntity = $input['animalEntity'];
     }
 
     /**
-     * @return AnimalEntity
+     * @return AnimalCreateAnimalEntity
      */
-    public function AnimalCreateEntity(): AnimalEntity
+    public function AnimalEntity(): AnimalCreateAnimalEntity
     {
         return $this->animalEntity;
     }

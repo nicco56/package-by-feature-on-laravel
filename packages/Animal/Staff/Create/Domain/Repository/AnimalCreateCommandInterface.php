@@ -1,15 +1,15 @@
 <?php
 
-namespace Packages\Animal\Admin\AnimalCreate\Domain\Repository;
+namespace Packages\Animal\Staff\Create\Domain\Repository;
 
 
-use Packages\Animal\Admin\AnimalCreate\Domain\Entity\AnimalEntity;
+use Packages\Animal\Staff\Create\Domain\Entity\AnimalCreateAnimalEntity;
 
 interface AnimalCreateCommandInterface
 {
     /**
-     * @param AnimalEntity $animalEntity
-     * @return AnimalEntity
+     * @param AnimalCreateAnimalEntity $animalEntity
+     * @return AnimalCreateAnimalEntity
      */
-    public function animalCreate(AnimalEntity $animalEntity): AnimalEntity;
+    public function create(AnimalCreateAnimalEntity $animalEntity): AnimalCreateAnimalEntity;
 }

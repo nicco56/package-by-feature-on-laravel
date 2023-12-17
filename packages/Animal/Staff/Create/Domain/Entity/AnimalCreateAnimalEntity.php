@@ -2,7 +2,7 @@
 
 namespace Packages\Animal\Staff\Create\Domain\Entity;
 
-class AnimalEntity
+class AnimalCreateAnimalEntity
 {
     public function __construct(
         private readonly ?int    $id,

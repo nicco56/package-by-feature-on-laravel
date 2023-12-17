@@ -1,17 +1,17 @@
 <?php
 
-namespace Packages\Animal\Admin\AnimalCreate\Adaptor;
+namespace Packages\Animal\Staff\Create\Adaptor;
 
 
 use Illuminate\Http\JsonResponse;
-use Packages\Animal\Admin\AnimalCreate\Domain\Entity\AnimalEntity;
+use Packages\Animal\Staff\Create\Domain\Entity\AnimalCreateAnimalEntity;
 
 class AnimalCreateControllerOutput
 {
     /**
-     * @param AnimalEntity $animalEntity
+     * @param AnimalCreateAnimalEntity $animalEntity
      */
-    public function __construct(private readonly AnimalEntity $animalEntity)
+    public function __construct(private readonly AnimalCreateAnimalEntity $animalEntity)
     {
     }
 
@@ -20,11 +20,11 @@ class AnimalCreateControllerOutput
      */
     public function getJsonResponse(): JsonResponse
     {
-        $data['animal'] = $this->animalEntity ? [
+        $data['animal'] = [
             'id'    => $this->animalEntity->getId(),
             'name'  => $this->animalEntity->getName(),
             'width' => $this->animalEntity->getWidth(),
-        ] : null;
+        ];
 
         return new JsonResponse($data, 200);
     }

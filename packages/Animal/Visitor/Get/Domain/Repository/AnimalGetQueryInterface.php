@@ -1,15 +1,15 @@
 <?php
 
-namespace Packages\Animal\EndUser\AnimalGet\Domain\Repository;
+namespace Packages\Animal\Visitor\Get\Domain\Repository;
 
 
-use Packages\Animal\EndUser\AnimalGet\Domain\Entity\AnimalEntity;
+use Packages\Animal\Visitor\Get\Domain\Entity\AnimalGetAnimalEntity;
 
 interface AnimalGetQueryInterface
 {
     /**
      * @param int $id
-     * @return AnimalEntity|null
+     * @return AnimalGetAnimalEntity|null
      */
-    public function animalGet(int $id): ?AnimalEntity;
+    public function animalGet(int $id): ?AnimalGetAnimalEntity;
 }

@@ -1,13 +1,13 @@
 <?php
 
-namespace Packages\Animal\Admin\AnimalCreate;
+namespace Packages\Animal\Staff\Create;
 
 use Illuminate\Contracts\Support\DeferrableProvider;
 use Illuminate\Support\ServiceProvider;
-use Packages\Animal\Admin\AnimalCreate\Adaptor\AnimalCreateController;
-use Packages\Animal\Admin\AnimalCreate\Adaptor\AnimalCreateControllerInterface;
-use Packages\Animal\Admin\AnimalCreate\Domain\Repository\AnimalCreateCommandInterface;
-use Packages\Animal\Admin\AnimalCreate\Domain\Repository\DB\AnimalCreateCommand;
+use Packages\Animal\Staff\Create\Adaptor\AnimalCreateController;
+use Packages\Animal\Staff\Create\Adaptor\AnimalCreateControllerInterface;
+use Packages\Animal\Staff\Create\Domain\Repository\AnimalCreateCommandInterface;
+use Packages\Animal\Staff\Create\Domain\Repository\DB\AnimalCreateCommand;
 
 class PackageServiceProvider extends ServiceProvider implements DeferrableProvider
 {

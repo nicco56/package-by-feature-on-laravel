@@ -1,13 +1,13 @@
 <?php
 
-namespace Packages\Animal\EndUser\AnimalGet\UseCase;
+namespace Packages\Animal\Visitor\Get\UseCase;
 
 
-use Packages\Animal\EndUser\AnimalGet\Domain\Entity\AnimalEntity;
+use Packages\Animal\Visitor\Get\Domain\Entity\AnimalGetAnimalEntity;
 
 class AnimalGetUseCaseOutput
 {
-    private ?AnimalEntity $animalEntity;
+    private ?AnimalGetAnimalEntity $animalEntity;
 
     /**
      * @param array $input
@@ -18,9 +18,9 @@ class AnimalGetUseCaseOutput
     }
 
     /**
-     * @return AnimalEntity|null
+     * @return AnimalGetAnimalEntity|null
      */
-    public function animalGetEntity(): ?AnimalEntity
+    public function animalGetEntity(): ?AnimalGetAnimalEntity
     {
         return $this->animalEntity;
     }

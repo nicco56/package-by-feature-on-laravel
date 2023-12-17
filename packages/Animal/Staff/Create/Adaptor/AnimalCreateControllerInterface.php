@@ -1,6 +1,6 @@
 <?php
 
-namespace Packages\Animal\Admin\AnimalCreate\Adaptor;
+namespace Packages\Animal\Staff\Create\Adaptor;
 
 
 interface AnimalCreateControllerInterface

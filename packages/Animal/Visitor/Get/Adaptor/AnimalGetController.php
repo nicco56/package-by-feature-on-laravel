@@ -1,11 +1,11 @@
 <?php
 
-namespace Packages\Animal\EndUser\AnimalGet\Adaptor;
+namespace Packages\Animal\Visitor\Get\Adaptor;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\JsonResponse;
-use Packages\Animal\EndUser\AnimalGet\UseCase\AnimalGetUseCaseInput;
-use Packages\Animal\EndUser\AnimalGet\UseCase\AnimalGetUseCase;
+use Packages\Animal\Visitor\Get\UseCase\AnimalGetUseCaseInput;
+use Packages\Animal\Visitor\Get\UseCase\AnimalGetUseCase;
 
 class AnimalGetController extends Controller implements AnimalGetControllerInterface
 {

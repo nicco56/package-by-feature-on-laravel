@@ -2,7 +2,7 @@
 
 namespace Packages\Animal\Visitor\Get\Domain\Entity;
 
-class AnimalEntity
+class AnimalGetAnimalEntity
 {
     public function __construct(
         private readonly int    $id,
