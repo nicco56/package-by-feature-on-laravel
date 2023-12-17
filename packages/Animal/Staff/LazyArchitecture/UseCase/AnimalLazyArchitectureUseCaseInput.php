@@ -1,28 +1,17 @@
 <?php
 
-namespace Packages\Animal\EndUser\AnimalGet\Domain\Entity;
+namespace Packages\Animal\Staff\LazyArchitecture\UseCase;
 
-class AnimalEntity
+class AnimalLazyArchitectureUseCaseInput
 {
     public function __construct(
-        private readonly int    $id,
         private readonly string $name,
-        private readonly float  $width
+        private readonly float  $width,
     )
     {
     }
 
     /**
-     * ID
-     * @return int
-     */
-    public function getId(): int
-    {
-        return $this->id;
-    }
-
-    /**
-     * 名前
      * @return string
      */
     public function getName(): string
@@ -31,7 +20,6 @@ class AnimalEntity
     }
 
     /**
-     * 長さ
      * @return float
      */
     public function getWidth(): float

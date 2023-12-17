@@ -1,8 +1,8 @@
 <?php
 
-namespace Packages\Animal\Admin\AnimalCreate\Domain\Entity;
+namespace Packages\Animal\Staff\LazyArchitecture\Domain\Entity;
 
-class AnimalEntity
+class AnimalLazyArchitectureAnimalEntity
 {
     public function __construct(
         private readonly ?int    $id,
@@ -31,7 +31,7 @@ class AnimalEntity
     }
 
     /**
-     * 長さ
+     * 体長
      * @return float
      */
     public function getWidth(): float
