@@ -10,10 +10,10 @@ use Packages\Animal\Staff\Create\UseCase\AnimalCreateUseCaseInput;
 class AnimalCreateController extends Controller implements AnimalCreateControllerInterface
 {
     /**
-     * @param AnimalCreateUseCase $AnimalCreateUseCase
+     * @param AnimalCreateUseCase $animalCreateUseCase
      */
     public function __construct(
-        private readonly AnimalCreateUseCase $AnimalCreateUseCase
+        private readonly AnimalCreateUseCase $animalCreateUseCase
     )
     {
     }
@@ -25,7 +25,9 @@ class AnimalCreateController extends Controller implements AnimalCreateControlle
     public function __invoke(AnimalCreateControllerInput $request): JsonResponse
     {
         // UseCaseに渡し、Output取得
-        $useCaseOutput = $this->AnimalCreateUseCase->__invoke(new AnimalCreateUseCaseInput($request->getName(), $request->getWidth()));
+        $useCaseOutput = $this->animalCreateUseCase->__invoke(
+            new AnimalCreateUseCaseInput($request->getName(), $request->getWidth())
+        );
 
         // コントローラーのOutputを作成
         $controllerOutput = (new AnimalCreateControllerOutput($useCaseOutput->AnimalEntity()));

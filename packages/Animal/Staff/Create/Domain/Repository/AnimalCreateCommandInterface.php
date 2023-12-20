@@ -8,8 +8,9 @@ use Packages\Animal\Staff\Create\Domain\Entity\AnimalCreateAnimalEntity;
 interface AnimalCreateCommandInterface
 {
     /**
-     * @param AnimalCreateAnimalEntity $animalEntity
+     * @param string $name
+     * @param int $width
      * @return AnimalCreateAnimalEntity
      */
-    public function create(AnimalCreateAnimalEntity $animalEntity): AnimalCreateAnimalEntity;
+    public function create(string $name, int $width): AnimalCreateAnimalEntity;
 }

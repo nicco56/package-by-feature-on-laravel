@@ -8,22 +8,17 @@ use Packages\Animal\Staff\Create\Domain\Repository\AnimalCreateCommandInterface;
 
 class AnimalCreateCommand implements AnimalCreateCommandInterface
 {
-    public function create(AnimalCreateAnimalEntity $animalEntity): AnimalCreateAnimalEntity
+    public function create(string $name, int $width): AnimalCreateAnimalEntity
     {
-        $result = Animal::create([
-            'name'  => $animalEntity->getName(),
-            'width' => $animalEntity->getWidth(),
+        $animalModel = Animal::create([
+            'name'  => $name,
+            'width' => $width,
         ]);
 
-        return $this->convertToEntity($result);
-    }
-
-    private function convertToEntity(Animal $obj): AnimalCreateAnimalEntity
-    {
         return new AnimalCreateAnimalEntity(
-            id: $obj->id,
-            name: $obj->name,
-            width: $obj->width ?? 0.00,
+            id: $animalModel->id,
+            name: $animalModel->name,
+            width: $animalModel->width,
         );
     }
 }

@@ -5,9 +5,9 @@ namespace Packages\Animal\Staff\Create\Domain\Entity;
 class AnimalCreateAnimalEntity
 {
     public function __construct(
-        private readonly ?int    $id,
+        private readonly int    $id,
         private readonly string $name,
-        private readonly float  $width
+        private readonly int    $width
     )
     {
     }
@@ -32,9 +32,9 @@ class AnimalCreateAnimalEntity
 
     /**
      * 体長
-     * @return float
+     * @return int
      */
-    public function getWidth(): float
+    public function getWidth(): int
     {
         return $this->width;
     }

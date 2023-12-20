@@ -23,16 +23,10 @@ class AnimalCreateUseCase
      */
     public function __invoke(AnimalCreateUseCaseInput $input): AnimalCreateUseCaseOutput
     {
-        // 作成する動物
-        $inputAnimalEntity = new AnimalCreateAnimalEntity(
-            id: null,
+        // 動物を作成
+        $createdAnimalEntity = $this->animalCreateQuery->create(
             name: $input->getName(),
             width: $input->getWidth(),
-        );
-
-        // 作成した動物
-        $createdAnimalEntity = $this->animalCreateQuery->create(
-            animalEntity: $inputAnimalEntity
         );
 
         // UseCaseのOutputを作成し、返す
