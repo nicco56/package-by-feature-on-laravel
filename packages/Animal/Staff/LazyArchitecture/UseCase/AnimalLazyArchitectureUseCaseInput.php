@@ -6,7 +6,7 @@ class AnimalLazyArchitectureUseCaseInput
 {
     public function __construct(
         private readonly string $name,
-        private readonly float  $width,
+        private readonly int  $width,
     )
     {
     }
@@ -20,9 +20,9 @@ class AnimalLazyArchitectureUseCaseInput
     }
 
     /**
-     * @return float
+     * @return int
      */
-    public function getWidth(): float
+    public function getWidth(): int
     {
         return $this->width;
     }

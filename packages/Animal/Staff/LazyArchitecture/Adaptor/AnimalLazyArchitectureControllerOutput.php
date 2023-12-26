@@ -21,12 +21,12 @@ class AnimalLazyArchitectureControllerOutput
      */
     public function getJsonResponse(): JsonResponse
     {
-        $data['animal'] = [
-            'id'    => $this->animalEntity->getId(),
-            'name'  => $this->animalEntity->getName(),
-            'width' => $this->animalEntity->getWidth(),
-        ];
-
-        return new JsonResponse($data);
+        return new JsonResponse([
+            'animal' => [
+                'id' => $this->animalEntity->getId(),
+                'name' => $this->animalEntity->getName(),
+                'width' => $this->animalEntity->getWidth(),
+            ]
+        ]);
     }
 }

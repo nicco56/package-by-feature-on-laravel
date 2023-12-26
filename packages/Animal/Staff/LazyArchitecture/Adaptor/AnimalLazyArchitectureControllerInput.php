@@ -20,18 +20,18 @@ class AnimalLazyArchitectureControllerInput extends FormRequest
     public function rules(): array
     {
         return [
-            'name'  => ['string'],
-            'width' => ['nullable', 'regex:^\d{0,2}(\.\d{1,2})?$/']
+            'name'  => ['required','string'],
+            'width' => ['required', 'integer']
         ];
     }
 
-    public function getName(): int
+    public function getName(): string
     {
         return $this->input('name');
     }
 
     public function getWidth(): int
     {
-        return $this->input('name');
+        return $this->input('width');
     }
 }

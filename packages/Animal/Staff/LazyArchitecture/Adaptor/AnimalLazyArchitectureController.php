@@ -16,14 +16,8 @@ class AnimalLazyArchitectureController extends Controller
     public function __invoke(AnimalLazyArchitectureControllerInput $request): JsonResponse
     {
         $useCaseInput = new AnimalLazyArchitectureUseCaseInput($request->getName(), $request->getWidth());
-
-        // UseCaseに渡し、Output取得
         $useCaseOutput = (new AnimalLazyArchitectureUseCase())->__invoke($useCaseInput);
-
-        // コントローラーのOutputを作成
-        $controllerOutput = (new AnimalLazyArchitectureControllerOutput($useCaseOutput->AnimalLazyArchitectureEntity()));
-
-        // コントローラーのOutputで戻し方指定
+        $controllerOutput = (new AnimalLazyArchitectureControllerOutput($useCaseOutput->getAnimalLazyArchitectureEntity()));
         return $controllerOutput->getJsonResponse();
     }
 }

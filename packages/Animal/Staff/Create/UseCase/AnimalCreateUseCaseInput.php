@@ -20,7 +20,7 @@ class AnimalCreateUseCaseInput
     }
 
     /**
-     * @return float
+     * @return int
      */
     public function getWidth(): int
     {

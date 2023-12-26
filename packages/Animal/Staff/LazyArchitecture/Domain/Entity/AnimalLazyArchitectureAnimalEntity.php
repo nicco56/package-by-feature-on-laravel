@@ -5,7 +5,7 @@ namespace Packages\Animal\Staff\LazyArchitecture\Domain\Entity;
 class AnimalLazyArchitectureAnimalEntity
 {
     public function __construct(
-        private readonly ?int   $id,
+        private readonly int   $id,
         private readonly string $name,
         private readonly float  $width
     )
@@ -14,9 +14,9 @@ class AnimalLazyArchitectureAnimalEntity
 
     /**
      * ID
-     * @return ?int
+     * @return int
      */
-    public function getId(): ?int
+    public function getId(): int
     {
         return $this->id;
     }

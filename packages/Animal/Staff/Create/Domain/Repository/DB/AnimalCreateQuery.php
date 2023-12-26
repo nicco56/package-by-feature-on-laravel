@@ -4,9 +4,9 @@ namespace Packages\Animal\Staff\Create\Domain\Repository\DB;
 
 use App\Models\Animal;
 use Packages\Animal\Staff\Create\Domain\Entity\AnimalCreateAnimalEntity;
-use Packages\Animal\Staff\Create\Domain\Repository\AnimalCreateCommandInterface;
+use Packages\Animal\Staff\Create\Domain\Repository\AnimalCreateQueryInterface;
 
-class AnimalCreateCommand implements AnimalCreateCommandInterface
+class AnimalCreateQuery implements AnimalCreateQueryInterface
 {
     public function create(string $name, int $width): AnimalCreateAnimalEntity
     {

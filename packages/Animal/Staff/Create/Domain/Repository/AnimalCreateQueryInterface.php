@@ -5,7 +5,7 @@ namespace Packages\Animal\Staff\Create\Domain\Repository;
 
 use Packages\Animal\Staff\Create\Domain\Entity\AnimalCreateAnimalEntity;
 
-interface AnimalCreateCommandInterface
+interface AnimalCreateQueryInterface
 {
     /**
      * @param string $name

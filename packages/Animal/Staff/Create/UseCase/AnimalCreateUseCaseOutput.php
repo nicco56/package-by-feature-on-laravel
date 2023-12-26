@@ -14,7 +14,7 @@ class AnimalCreateUseCaseOutput
     /**
      * @return AnimalCreateAnimalEntity
      */
-    public function AnimalEntity(): AnimalCreateAnimalEntity
+    public function getAnimalEntity(): AnimalCreateAnimalEntity
     {
         return $this->animalEntity;
     }

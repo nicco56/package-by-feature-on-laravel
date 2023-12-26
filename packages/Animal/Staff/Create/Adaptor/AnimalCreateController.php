@@ -24,15 +24,12 @@ class AnimalCreateController extends Controller implements AnimalCreateControlle
      */
     public function __invoke(AnimalCreateControllerInput $request): JsonResponse
     {
-        // UseCaseに渡し、Output取得
         $useCaseOutput = $this->animalCreateUseCase->__invoke(
             new AnimalCreateUseCaseInput($request->getName(), $request->getWidth())
         );
 
-        // コントローラーのOutputを作成
-        $controllerOutput = (new AnimalCreateControllerOutput($useCaseOutput->AnimalEntity()));
+        $controllerOutput = (new AnimalCreateControllerOutput($useCaseOutput->getAnimalEntity()));
 
-        // コントローラーのOutputで戻し方指定
         return $controllerOutput->getJsonResponse();
     }
 }

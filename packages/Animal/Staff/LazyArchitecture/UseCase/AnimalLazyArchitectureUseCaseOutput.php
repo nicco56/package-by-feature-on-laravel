@@ -16,7 +16,7 @@ class AnimalLazyArchitectureUseCaseOutput
     /**
      * @return AnimalLazyArchitectureAnimalEntity
      */
-    public function animalLazyArchitectureEntity(): AnimalLazyArchitectureAnimalEntity
+    public function getAnimalLazyArchitectureEntity(): AnimalLazyArchitectureAnimalEntity
     {
         return $this->animalEntity;
     }
